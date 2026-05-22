@@ -1,0 +1,23 @@
+:root {
+  --primary-red: #a01327;
+  --sec-red: #a013271c;
+  --border-red: #a013271c;
+  --shadow-red: #a01327a8;
+  --primary-blue: #0078fa;
+
+  --black-red: #18000470;
+
+  --black: #000;
+  --black-overlay: #000000e0;
+  --white: #f0f0f0;
+  --font-popins: "Poppins", sans-serif;
+
+  --gradiant: radial-gradient(
+    circle,
+    rgba(255, 153, 153, 1) 0%,
+    rgba(160, 19, 39, 1) 33%,
+    rgba(160, 19, 108, 1) 64%,
+    rgba(135, 19, 104, 1) 83%,
+    rgba(71, 19, 160, 1) 100%
+  );
+}

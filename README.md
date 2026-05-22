@@ -2,6 +2,8 @@
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+https://dev.to/kerthin/how-to-create-pure-css-glitch-animation-for-images-and-svg-ojl
+
 ## Setup
 
 Make sure to install dependencies:

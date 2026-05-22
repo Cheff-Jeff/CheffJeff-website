@@ -1,0 +1,281 @@
+.page-wrap {
+  background: var(--black);
+  min-height: 100vh;
+  min-height: 100dvh;
+
+  .bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+    }
+
+    &::before {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--black-overlay);
+      z-index: 2;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100dvh;
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    margin-right: -10%;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    em {
+      background: var(--gradiant);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .img-wrapper {
+    max-width: 500px;
+    position: relative;
+
+    img {
+      width: 100%;
+      z-index: 1;
+      position: relative;
+      opacity: 0;
+    }
+
+    .img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      padding-top: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url("~/assets/img/me.webp");
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        inset: 0;
+        clip: rect(0, 0, 0, 0);
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &::before {
+        left: -20px;
+        background-image: url("~/assets/img/me.webp");
+        filter: grayscale(100%) sepia(100%) saturate(250%) hue-rotate(120deg)
+          brightness(121%) contrast(121%);
+      }
+      &::after {
+        left: 20px;
+        background-image: url("~/assets/img/me.webp");
+        filter: grayscale(100%) sepia(100%) saturate(250%) hue-rotate(240deg)
+          brightness(121%) contrast(121%);
+      }
+
+      &.glitch-pink {
+        &::after {
+          opacity: 1;
+          animation: glitch-effect-pink 600ms linear;
+        }
+      }
+
+      &.glitch-green {
+        &::before {
+          opacity: 1;
+          animation: glitch-effect-green 600ms linear;
+        }
+      }
+    }
+
+    &::before {
+      z-index: 2;
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--black-overlay);
+      z-index: 2;
+    }
+  }
+}
+
+@keyframes glitch-effect-pink {
+  0% {
+    clip: var(--pink-rect-f1);
+  }
+  5.8823529412% {
+    clip: var(--pink-rect-f2);
+  }
+  11.7647058824% {
+    clip: var(--pink-rect-f3);
+  }
+  17.6470588235% {
+    clip: var(--pink-rect-f4);
+  }
+  23.5294117647% {
+    clip: var(--pink-rect-f5);
+  }
+  29.4117647059% {
+    clip: var(--pink-rect-f6);
+  }
+  35.2941176471% {
+    clip: var(--pink-rect-f7);
+  }
+  41.1764705882% {
+    clip: var(--pink-rect-f8);
+  }
+  47.0588235294% {
+    clip: var(--pink-rect-f9);
+  }
+  52.9411764706% {
+    clip: var(--pink-rect-f10);
+  }
+  58.8235294118% {
+    clip: var(--pink-rect-f11);
+  }
+  64.7058823529% {
+    clip: var(--pink-rect-f12);
+  }
+  70.5882352941% {
+    clip: var(--pink-rect-f13);
+  }
+  76.4705882353% {
+    clip: var(--pink-rect-f14);
+  }
+  82.3529411765% {
+    clip: var(--pink-rect-f15);
+  }
+  88.2352941176% {
+    clip: var(--pink-rect-f16);
+  }
+  94.1176470588% {
+    clip: var(--pink-rect-f17);
+  }
+  100% {
+    clip: var(--pink-rect-f18);
+  }
+}
+
+@keyframes glitch-effect-green {
+  0% {
+    clip: var(--green-rect-f1);
+  }
+  5.8823529412% {
+    clip: var(--green-rect-f2);
+  }
+  11.7647058824% {
+    clip: var(--green-rect-f3);
+  }
+  17.6470588235% {
+    clip: var(--green-rect-f4);
+  }
+  23.5294117647% {
+    clip: var(--green-rect-f5);
+  }
+  29.4117647059% {
+    clip: var(--green-rect-f6);
+  }
+  35.2941176471% {
+    clip: var(--green-rect-f7);
+  }
+  41.1764705882% {
+    clip: var(--green-rect-f8);
+  }
+  47.0588235294% {
+    clip: var(--green-rect-f9);
+  }
+  52.9411764706% {
+    clip: var(--green-rect-f10);
+  }
+  58.8235294118% {
+    clip: var(--green-rect-f11);
+  }
+  64.7058823529% {
+    clip: var(--green-rect-f12);
+  }
+  70.5882352941% {
+    clip: var(--green-rect-f13);
+  }
+  76.4705882353% {
+    clip: var(--green-rect-f14);
+  }
+  82.3529411765% {
+    clip: var(--green-rect-f15);
+  }
+  88.2352941176% {
+    clip: var(--green-rect-f16);
+  }
+  94.1176470588% {
+    clip: var(--green-rect-f17);
+  }
+  100% {
+    clip: var(--green-rect-f18);
+  }
+}
+
+:root {
+  --pink-rect-f1: rect(299px, 400px, 56px, 0);
+  --pink-rect-f2: rect(126px, 400px, 204px, 0);
+  --pink-rect-f3: rect(123px, 400px, 252px, 0);
+  --pink-rect-f4: rect(280px, 400px, 225px, 0);
+  --pink-rect-f5: rect(25px, 400px, 202px, 0);
+  --pink-rect-f6: rect(164px, 400px, 60px, 0);
+  --pink-rect-f7: rect(110px, 400px, 214px, 0);
+  --pink-rect-f8: rect(88px, 400px, 104px, 0);
+  --pink-rect-f9: rect(279px, 400px, 102px, 0);
+  --pink-rect-f10: rect(64px, 400px, 146px, 0);
+  --pink-rect-f11: rect(47px, 400px, 12px, 0);
+  --pink-rect-f12: rect(296px, 400px, 166px, 0);
+  --pink-rect-f13: rect(202px, 400px, 264px, 0);
+  --pink-rect-f14: rect(183px, 400px, 248px, 0);
+  --pink-rect-f15: rect(27px, 400px, 36px, 0);
+  --pink-rect-f16: rect(266px, 400px, 195px, 0);
+  --pink-rect-f17: rect(266px, 400px, 195px, 0);
+  --pink-rect-f18: rect(126px, 400px, 198px, 0);
+
+  --green-rect-f1: rect(299px, 400px, 56px, 0);
+  --green-rect-f2: rect(126px, 400px, 204px, 0);
+  --green-rect-f3: rect(123px, 400px, 252px, 0);
+  --green-rect-f4: rect(280px, 400px, 225px, 0);
+  --green-rect-f5: rect(25px, 400px, 202px, 0);
+  --green-rect-f6: rect(164px, 400px, 60px, 0);
+  --green-rect-f7: rect(110px, 400px, 214px, 0);
+  --green-rect-f8: rect(88px, 400px, 104px, 0);
+  --green-rect-f9: rect(279px, 400px, 102px, 0);
+  --green-rect-f10: rect(64px, 400px, 146px, 0);
+  --green-rect-f11: rect(47px, 400px, 12px, 0);
+  --green-rect-f12: rect(296px, 400px, 166px, 0);
+  --green-rect-f13: rect(202px, 400px, 264px, 0);
+  --green-rect-f14: rect(183px, 400px, 248px, 0);
+  --green-rect-f15: rect(27px, 400px, 36px, 0);
+  --green-rect-f16: rect(266px, 400px, 195px, 0);
+  --green-rect-f17: rect(266px, 400px, 195px, 0);
+  --green-rect-f18: rect(126px, 400px, 198px, 0);
+}

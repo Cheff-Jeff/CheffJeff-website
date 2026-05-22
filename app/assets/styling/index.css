@@ -1,0 +1,20 @@
+@import "./fonts.css";
+@import "./vars.css";
+
+@import "./buttons.css";
+@import "./animations.css";
+@import "./components/header.css";
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  position: relative;
+}
+
+.container {
+  width: clamp(300px, 80%, 1200px);
+  padding: 0 20px;
+}
